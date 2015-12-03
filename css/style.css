@@ -679,6 +679,13 @@ a {
 #header .header-nav .social a.mail:hover {
   border: 1px solid #006b98;
 }
+#header .header-nav .social a.robot {
+  background: url("/img/robot.png") center no-repeat #44b549;
+  border: 1px solid #44b549;
+}
+#header .header-nav .social a.robot:hover {
+  border: 1px solid #44b549;
+}
 #header .switch-part {
   width: 100%;
   position: absolute;
