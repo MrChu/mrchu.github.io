@@ -521,11 +521,10 @@ MathJax.Hub.Queue(function() {
 		.input-group-btn {display: table-cell;border-collapse: separate;position: relative;white-space: nowrap;width: 1%;vertical-align: middle;}
 		.panel-footer .send-btn {position: relative;display: inline-block;padding: 7px 12px 7px 25px;margin-bottom: 0;font-size: 14px;font-weight: normal;line-height: 1.428571429;text-align: center;white-space: nowrap;vertical-align: middle;cursor: pointer;color: #fff;background: #44b549 url(img/send.png) 5px center no-repeat;border: 1px solid #44b549;margin-left: -1px;border-radius: 4px;border-bottom-left-radius: 0;border-top-left-radius: 0;-webkit-user-select: none;}
 		.panel-footer .send-btn:hover {border-color: #44b549;box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);}
-		.robot {display: block;position: absolute;top: 50%;left: 50%;margin-top: -15px;margin-left: -60px;width: 120px;height: 30px;line-height: 30px;font-family: 'Microsoft YaHei';color: #44b549;text-align: center;text-decoration: none;border: 1px solid #44b549;border-radius: 5px;box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);}
-		.robot:hover {color: #fff;background-color: #44b549;}
 		.link {color: #0089fa;text-decoration: none;}
 		.link:hover {color: #ffa900;}
 		.news {display: block;margin-top: 8px;}
+		.strong {font-weight: bold;}
 		.cookbook {margin-top: 5px;}
 		.cookbook_left {float: left;}
 		.cookbook img {width: 70px;height: 70px;}
@@ -597,9 +596,9 @@ MathJax.Hub.Queue(function() {
 				var terminal = item.terminal;
 				var starttime = item.starttime;
 				var endtime = item.endtime;
-				result += '<p>车次：<strong>' + trainnum + '</strong></p>';
-				result += '<p>始发站：<strong>' + start + '</strong>，终点站：<strong>' + terminal + '</strong></p>';
-				result += '<p>发车时间：<strong>' + starttime + '</strong>，到达时间：<strong>' + endtime + '</strong></p>';
+				result += '<p>车次：<span class="strong">' + trainnum + '</span></p>';
+				result += '<p>始发站：<span class="strong">' + start + '</span>，终点站：<span class="strong">' + terminal + '</span></p>';
+				result += '<p>发车时间：<span class="strong">' + starttime + '</span>，到达时间：<span class="strong">' + endtime + '</span></p>';
 			} else if (code == 306000) { // 航班
 				var list = json.list;
 				result = text;
@@ -607,8 +606,8 @@ MathJax.Hub.Queue(function() {
 				var flight = item.flight;
 				var starttime = item.starttime;
 				var endtime = item.endtime;
-				result += '<p>航班信息：<strong>' + flight + '</strong></p>';
-				result += '<p>起飞时间：<strong>' + starttime + '</strong>，降落时间：<strong>' + endtime + '</strong></p>';
+				result += '<p>航班信息：<span class="strong">' + flight + '</span></p>';
+				result += '<p>起飞时间：<span class="strong">' + starttime + '</span>，降落时间：<span class="strong">' + endtime + '</span></p>';
 			} else if (code == 308000) { // 菜谱
 				var list = json.list;
 				var item = list[0];
