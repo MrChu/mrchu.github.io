@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>音乐库</title>
+  <title>音乐单</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="音乐库">
+<meta property="og:title" content="音乐单">
 <meta property="og:url" content="http://yoursite.com/2015/10/20/untitled-1448609360212/index.html">
 <meta property="og:site_name" content="傻了么？">
 <meta property="og:description">
 <meta property="og:updated_time" content="2015-12-03T01:09:22.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="音乐库">
+<meta name="twitter:title" content="音乐单">
 <meta name="twitter:description">
   
   
@@ -21,6 +21,9 @@
   
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   <link type="text/css" rel="stylesheet" href="http://cdn.bootcss.com/aplayer/1.4.6/APlayer.min.css" />
+  <style type="text/css">
+	.aplayer {margin-bottom: 20px;}
+  </style>
   <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
@@ -98,7 +101,7 @@
 				        
 							<li><a href="/tags/随笔">时光轴</a></li>
 
-							<li><a href="/music/">每日单曲</a></li>
+							<li><a href="/music/">音乐单</a></li>
 				        
 						</ul>
 					</nav>
@@ -163,7 +166,7 @@
 		        
 					<li><a href="/tags/随笔">时光轴</a></li>
 
-					<li><a href="/music/">每日单曲</a></li>
+					<li><a href="/music/">音乐单</a></li>
 		        
 		        <div class="clearfix"></div>
 				</ul>
@@ -199,7 +202,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      音乐库
+      音乐单
     </h1>
   
 
@@ -215,7 +218,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="player" class="aplayer"></div>
+        <div id="m_00001" class="aplayer"></div>
+		<div id="m_00002" class="aplayer"></div>
+		<div id="m_00003" class="aplayer"></div>
 
       
     </div>
@@ -465,8 +470,8 @@ MathJax.Hub.Queue(function() {
 	</div>
 	<script type="text/javascript" src="http://cdn.bootcss.com/aplayer/1.4.6/APlayer.min.js"></script>
 	<script type="text/javascript">
-		var player = new APlayer({
-			element: document.getElementById('player'),
+		var p_00001 = new APlayer({
+			element: document.getElementById('m_00001'),
 			narrow: false,
 			autoplay: true,
 			showlrc: false,
@@ -477,10 +482,44 @@ MathJax.Hub.Queue(function() {
 				title: '思念是一种病',
 				author: '张震岳',
 				url: 'http://7xvh1w.com1.z0.glb.clouddn.com/%E6%80%9D%E5%BF%B5%E6%98%AF%E4%B8%80%E7%A7%8D%E7%97%85%20-%20%E5%BC%A0%E9%9C%87%E5%B2%B3.mp3',
-				pic: 'http://7xvh1w.com1.z0.glb.clouddn.com/ok.jpg'
+				pic: 'http://7xvh1w.com1.z0.glb.clouddn.com/snsyzb.jpg'
 			}
 		});
-		player.init();
+		p_00001.init();
+
+		var p_00002 = new APlayer({
+			element: document.getElementById('m_00002'),
+			narrow: false,
+			autoplay: false,
+			showlrc: false,
+			mutex: true,
+			theme: '#e6d0b2',
+			preload: 'metadata',
+			music: {
+				title: '空白格',
+				author: '杨宗纬',
+				url: 'http://7xvh1w.com1.z0.glb.clouddn.com/%E7%A9%BA%E7%99%BD%E6%A0%BC%20-%20%E6%9D%A8%E5%AE%97%E7%BA%AC.mp3',
+				pic: 'http://7xvh1w.com1.z0.glb.clouddn.com/kbg.jpg'
+			}
+		});
+		p_00002.init();
+
+		var p_00003 = new APlayer({
+			element: document.getElementById('m_00003'),
+			narrow: false,
+			autoplay: false,
+			showlrc: false,
+			mutex: true,
+			theme: '#e6d0b2',
+			preload: 'metadata',
+			music: {
+				title: '遥远的她',
+				author: '张学友',
+				url: 'http://7xvh1w.com1.z0.glb.clouddn.com/%E9%81%A5%E8%BF%9C%E7%9A%84%E5%A5%B9%20-%20%E5%BC%A0%E5%AD%A6%E5%8F%8B.mp3',
+				pic: 'http://7xvh1w.com1.z0.glb.clouddn.com/yydt.jpg'
+			}
+		});
+		p_00003.init();
 	</script>
 </body>
 </html>
